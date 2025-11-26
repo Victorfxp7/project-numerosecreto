@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogue: Número Secreto</title>
+
+    <link rel="stylesheet" href="assets/CSS/style.css"> 
+</head>
+<body class="game-body">
+
+    <section id="game-area" class="hero-section">
+        <div class="background-video-container">
+            <video autoplay loop muted playsinline class="background-video" poster="videos/game-poster.jpg">
+                <source src="assets/videos/futuristc.mp4" type="video/mp4">
+            </video>
+            <div class="video-overlay" style="background-color: rgba(0, 0, 0, 0.9);"></div>
+        </div>
+            <div>
+                <img src="robo.png" alt="robo" class="robo">
+            </div>
+
+            <main class="game-container">
+                <h1 class="main-title">Adivinhe o Número Secreto!</h1>
+                <p class="range-info">O número está entre 1 e 100.</p>
+                
+                <div id="result-text" class="feedback-message">
+                    Clique em "Verificar" para começar a jogar.
+                </div>
+
+                <div class="settings-area">
+                    <input 
+                     type="number" 
+                     id="max-number" 
+                     min="10" 
+                     max="1000" 
+                     placeholder="Escolha o número máximo (ex: 100)"
+                >
+              <button id="set-max-btn">DEFINIR LIMITE</button>
+              
+            </div>
+
+                <div class="input-area">
+                    <input 
+                       id="guess-input"
+                        type="text"
+                        inputmode="numeric"
+                        pattern="\d*"
+                        placeholder="Seu palpite (1-100)"
+                        aria-label="Digite um número entre 1 e 100"
+                        autocomplete="off"
+                        autofocus
+                        >
+                    <button id="guess-button" class="button">Verificar</button>
+                </div>
+
+                <div class="stats-area">
+                    <p>Tentativas: <span id="attempts-count">0</span></p>
+                    
+                    <button id="reset-button" class="button reset-btn" style="display: none;">Jogar Novamente</button>
+                    
+                    <a href="index.html" class="button back-btn">Voltar à Home</a>
+                </div>
+            </main>
+        </div>
+    </section>
+
+    <script src="assets/js/main-numero-secreto.js"></script>
+    <script src="assets/js/numerosecreto.js"></script>
+</body>
+</html>
